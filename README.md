@@ -1,29 +1,81 @@
-# Create T3 App
+# FiguTrack
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`, streamlined for figure collection pre-order management.
 
-## What's next? How do I make an app with this?
+## About
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+FiguTrack addresses the challenges of managing anime figure pre-orders across multiple retailers. While comprehensive databases like MyFigureCollection (MFC) exist for tracking figure releases, FiguTrack focuses specifically on the financial and logistical aspects of collecting:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- Track payment deadlines and upcoming financial commitments
+- Visualize monthly spending across different retailers
+- Identify shipping consolidation opportunities
+- Manage pre-orders with varying payment timelines
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Tech Stack
+
+We've kept this project intentionally simple, using only the essential T3 Stack components needed for our MVP:
+
+- [Next.js](https://nextjs.org) - React framework for the web application
+- [Tailwind CSS](https://tailwindcss.com) - For styling and UI components
+- IndexedDB - Client-side storage for offline-first functionality
+
+While the T3 Stack provides additional technologies (tRPC, Prisma, NextAuth.js, Drizzle), we're focusing on a streamlined client-side application for the initial release.
+
+## Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/figutrack.git
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Visit `http://localhost:3000` to see the application.
+
+## Project Structure
+
+```
+src/
+├── components/    # Reusable UI components
+├── pages/         # Next.js pages and API routes
+├── styles/        # Global styles and Tailwind config
+└── utils/         # Utility functions and IndexedDB setup
+```
+
+## Features
+
+Current implementation focuses on core functionality:
+
+- Pre-order tracking
+- Payment deadline management
+- Monthly budget visualization
+
+
+## Development
+
+We prioritize simplicity and offline-first functionality. The application uses IndexedDB for local storage, making it immediately useful without requiring user accounts or server infrastructure.
+
+## Potential Future Plans
+
+- Figure Search
+- MFC integration
+- User accounts and cloud sync
+- Shipping consolidation opportunities
+- Price tracking across retailers
+- Collection sharing features
+- Community features
+- Integration with figure databases
 
 ## Learn More
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+- [T3 Stack Documentation](https://create.t3.gg/)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## License
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+[MIT](https://choosealicense.com/licenses/mit/)
