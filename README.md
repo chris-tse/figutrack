@@ -40,8 +40,8 @@ Visit `http://localhost:3000` to see the application.
 
 ```
 src/
-├── components/    # Reusable UI components
-├── pages/         # Next.js pages and API routes
+├── app/           # Next.js app router
+├── app/           # Reusable UI components
 ├── styles/        # Global styles and Tailwind config
 └── utils/         # Utility functions and IndexedDB setup
 ```
