@@ -16,8 +16,8 @@ export function RemainingPaymentsChart({ data }: RemainingPaymentsChartProps) {
 				<AreaChart data={data}>
 					<defs>
 						<linearGradient id="remainingGradient" x1="0" y1="0" x2="0" y2="1">
-							<stop offset="5%" stopColor="#3b82f6" stopOpacity={0.8} />
-							<stop offset="95%" stopColor="#3b82f6" stopOpacity={0.2} />
+							<stop offset="5%" stopColor="hsl(var(--accent))" stopOpacity={0.8} />
+							<stop offset="95%" stopColor="hsl(var(--accent))" stopOpacity={0.2} />
 						</linearGradient>
 					</defs>
 					<XAxis
@@ -35,7 +35,7 @@ export function RemainingPaymentsChart({ data }: RemainingPaymentsChartProps) {
 							return `${month}/${year}`
 						}}
 					/>
-					<Area type="stepAfter" dataKey="remaining" stroke="#3b82f6" fill="url(#remainingGradient)" />
+					<Area type="stepAfter" dataKey="remaining" stroke="hsl(var(--accent))" fill="url(#remainingGradient)" />
 				</AreaChart>
 			</ResponsiveContainer>
 		</>
