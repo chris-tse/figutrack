@@ -1,5 +1,6 @@
 'use client'
-import { Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, XAxis, YAxis } from 'recharts'
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart'
 
 type MonthlyPaymentsChartProps = {
 	data: {
@@ -8,18 +9,29 @@ type MonthlyPaymentsChartProps = {
 	}[]
 }
 
+const chartConfig = {
+	amount: {
+		label: 'Payment',
+		color: 'hsl(var(--primary))',
+	},
+} satisfies ChartConfig
+
 export function MonthlyPaymentsChart({ data }: MonthlyPaymentsChartProps) {
 	return (
 		<>
 			<div className="mb-2 text-sm font-medium">Next 3 Months</div>
-			<ResponsiveContainer width="100%" height="100%">
-				<BarChart data={data}>
+			<ChartContainer config={chartConfig} className="h-full w-full">
+				<BarChart accessibilityLayer data={data}>
 					<XAxis dataKey="month" />
-					<YAxis tickFormatter={(value) => `¥${value}`} />
-					<Tooltip formatter={(value) => [`¥${value.toString()}`, 'Payment Due']} />
-					<Bar dataKey="amount" fill="#3b82f6" />
+					<YAxis dataKey="amount" tickFormatter={(value: number) => `¥${value.toString()}`} />
+					{/*<Tooltip formatter={(value) => [`¥${value.toString()}`, 'Payment Due']} />*/}
+					<ChartTooltip
+						cursor={false}
+						content={<ChartTooltipContent hideLabel formatter={(value) => `Due\t ¥${value.toString()}`} />}
+					/>
+					<Bar dataKey="amount" fill="var(--color-amount)" />
 				</BarChart>
-			</ResponsiveContainer>
+			</ChartContainer>
 		</>
 	)
 }
