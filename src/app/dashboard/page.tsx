@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import { AlertCircle, Clock, Package, Wallet } from 'lucide-react'
+import { AlertCircle, Clock, Package, Plus, Wallet } from 'lucide-react'
 import { MonthlyPaymentsChart } from '@/app/dashboard/_components/monthly-payments-chart'
 import { RemainingPaymentsChart } from '@/app/dashboard/_components/remaining-payments-chart'
 import { DashboardCard } from '@/app/dashboard/_components/dashboard-card'
@@ -102,7 +102,10 @@ export default function Dashboard() {
 				{/* Header - Full Width */}
 				<div className="col-span-12 mb-6 flex items-center justify-between">
 					<h1 className="text-2xl font-bold">Dashboard</h1>
-					<button className="rounded bg-primary px-4 py-2 text-primary-foreground">Add Pre-order</button>
+					<button className="flex items-center rounded bg-primary px-4 py-2 text-primary-foreground">
+						<Plus className="mr-1 h-4 w-4" />
+						Add Pre-order
+					</button>
 				</div>
 
 				{/* At A Glance - 1/3 Width */}
