@@ -192,7 +192,7 @@ export default function Dashboard() {
 
 				{/* Financial Planning - Full Width */}
 				<div className="col-span-12">
-					<DashboardCard title="Financial Planning" icon={Wallet}>
+					<DashboardCard title="Future Payments" icon={Wallet}>
 						<div className="grid grid-cols-1 gap-6 lg:grid-cols-6">
 							{/* Monthly Payments Bar Chart */}
 							<div className="col-span-12 h-64 lg:col-span-2">
